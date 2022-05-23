@@ -34,6 +34,8 @@ QUERY.
 
 ### 3 - A query is written and executed to create a Unique Titles ...
 
+QUERY.
+
     SELECT DISTINCT ON (emp_no) emp_no,
     first_name,
     last_name,
@@ -46,6 +48,8 @@ QUERY.
 [unique_titles.csv](Data/unique_titles.csv)
 
 ### 5 - A query is written and executed to create a Retiring Titles ...
+
+QUERY.
 
     SELECT COUNT(ut.emp_no),
     ut.title
@@ -69,6 +73,8 @@ Using the ERD you created in this module as a reference and your knowledge of SQ
 
 ### 1 - A query is written and executed to create a Mentorship Eligibility ...
 
+QUERY.
+
     SELECT DISTINCT ON(e.emp_no) e.emp_no, 
         e.first_name, 
         e.last_name, 
@@ -85,5 +91,5 @@ Using the ERD you created in this module as a reference and your knowledge of SQ
     WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
     ORDER BY e.emp_no;
     
-### 6 - The Retirement Titles table is exported as mentorship_eligibilty.csv.
+### 2 - The Retirement Titles table is exported as mentorship_eligibilty.csv.
 [mentorship_eligibilty.csv](Data/mentorship_eligibilty.csv)
