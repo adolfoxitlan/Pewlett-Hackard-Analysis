@@ -93,3 +93,55 @@ QUERY.
     
 ### 2 - The Retirement Titles table is exported as mentorship_eligibilty.csv.
 [mentorship_eligibilty.csv](Data/mentorship_eligibilty.csv)
+
+
+## Deliverable 3: A written report on the employee database Analysis.
+ 
+- Overview of the analysis.
+
+Now that Bobby has proven his SQL chops, his manager has given both of you two more assignments: determine the number of retiring employees per title, and identify employees who are eligible to participate in a mentorship program. Then, you’ll write a report that summarizes your analysis and helps prepare Bobby’s manager for the “silver tsunami” as many current employees reach retirement age. 
+
+- Results.
+
+Provide a bulleted list with four major points from the two analysis deliverables.
+
+Deliverable 1:
+- There is a huihg percetange of empoloyee that could retire at any time.
+- Important to mention that engineer postions are in the top 5 titles of the retiring_title.csv, those titles are hard to fill.
+
+      - 32,452 Staff
+      - 29,415 Senior Engineer
+      - 14,221 Engineer
+      - 8,047 Senior Staff
+      - 4,502 Technique Leader
+      - 1,761 Assistant Engineer
+
+- Summary.
+
+Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami.":
+
+1) How many roles will need to be filled as the "silver tsunami" begins to make an impact?.
+90,398 roles.
+
+2) Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+No, more than 1940 are junio employee, eigible for mentorship.
+
+QUERY.
+
+    SELECT DISTINCT ON(e.emp_no) e.emp_no, 
+        e.first_name, 
+        e.last_name, 
+        e.birth_date,
+        de.from_date,
+        de.to_date,
+        t.title
+    INTO mentorship_eligibilty
+    FROM employees as e
+    Left outer Join dept_emp as de
+    ON (e.emp_no = de.emp_no)
+    Left outer Join titles as t
+    ON (e.emp_no = t.emp_no)
+    WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+    ORDER BY e.emp_no;
+
+
