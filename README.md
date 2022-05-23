@@ -12,7 +12,7 @@ Using the ERD you created in this module as a reference and your knowledge of SQ
  - [x] 5 A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring.
  - [x] 6 The Retiring Titles table is exported as retiring_titles.csv
 
-### 1 - A query is written ...
+### 1 - A query is written and executed to create a Retirement Title ...
 
 QUERY.
 
@@ -31,3 +31,17 @@ QUERY.
 
 ### 2 - The Retirement Titles table is exported as retirement_titles.csv ...
 [retirement_titles.csv](https://github.com/adolfoxitlan/Pewlett-Hackard-Analysis/blob/97c8536d2ad3dda7f32f9fe571dc5b8be930c002/Data/retirement_titles.csv)
+
+### 3 - A query is written and executed to create a Unique Titles ...
+
+     SELECT DISTINCT ON (emp_no) emp_no,
+     first_name,
+     last_name,
+     title
+     INTO unique_titles
+     FROM retirement_titles
+     ORDER BY emp_no, title DESC;
+
+### 2 - The Retirement Titles table is exported as retirement_titles.csv ...
+[retirement_titles.csv]()
+
