@@ -34,14 +34,28 @@ QUERY.
 
 ### 3 - A query is written and executed to create a Unique Titles ...
 
-     SELECT DISTINCT ON (emp_no) emp_no,
-     first_name,
-     last_name,
-     title
-     INTO unique_titles
-     FROM retirement_titles
-     ORDER BY emp_no, title DESC;
+    SELECT DISTINCT ON (emp_no) emp_no,
+    first_name,
+    last_name,
+    title
+    INTO unique_titles
+    FROM retirement_titles
+    ORDER BY emp_no, title DESC;
 
-### 2 - The Retirement Titles table is exported as retirement_titles.csv ...
-[retirement_titles.csv]()
+### 4 - The Retirement Titles table is exported as unique_titles.csv ...
+[unique_titles.csv](Data/unique_titles.csv)
+
+### 5 - A query is written and executed to create a Retiring Titles ...
+
+    SELECT COUNT(ut.emp_no),
+    ut.title
+    INTO retiring_titles
+    FROM unique_titles as ut
+    GROUP BY title 
+    ORDER BY COUNT(title) DESC;
+    
+### 6 - The Retirement Titles table is exported as unique_titles.csv ...
+[retiring_titles.csv](Data/retiring_titles.csv)
+
+
 
