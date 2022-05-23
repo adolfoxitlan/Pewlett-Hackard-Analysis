@@ -121,10 +121,10 @@ Deliverable 1:
 Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami.":
 
 1) How many roles will need to be filled as the "silver tsunami" begins to make an impact?.
-90,398 roles.
+- 90,398 roles.
 
 2) Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-No, more than 1940 are junio employee, eigible for mentorship.
+- No, 1,940 are junior employee, eigible for mentorship.
 
 QUERY.
 
