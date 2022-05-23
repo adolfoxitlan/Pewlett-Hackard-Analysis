@@ -29,8 +29,8 @@ QUERY.
     WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
     order by e.emp_no;
 
-### 2 - The Retirement Titles table is exported as retirement_titles.csv ...
-[retirement_titles.csv](https://github.com/adolfoxitlan/Pewlett-Hackard-Analysis/blob/97c8536d2ad3dda7f32f9fe571dc5b8be930c002/Data/retirement_titles.csv)
+### 2 - The Retirement Titles table is exported as retirement_titles.csv.
+[retirement_titles.csv](Data/retirement_titles.csv)
 
 ### 3 - A query is written and executed to create a Unique Titles ...
 
@@ -42,7 +42,7 @@ QUERY.
     FROM retirement_titles
     ORDER BY emp_no, title DESC;
 
-### 4 - The Retirement Titles table is exported as unique_titles.csv ...
+### 4 - The Retirement Titles table is exported as unique_titles.csv.
 [unique_titles.csv](Data/unique_titles.csv)
 
 ### 5 - A query is written and executed to create a Retiring Titles ...
@@ -54,7 +54,7 @@ QUERY.
     GROUP BY title 
     ORDER BY COUNT(title) DESC;
     
-### 6 - The Retirement Titles table is exported as unique_titles.csv ...
+### 6 - The Retirement Titles table is exported as unique_titles.csv.
 [retiring_titles.csv](Data/retiring_titles.csv)
 
 
@@ -85,5 +85,5 @@ Using the ERD you created in this module as a reference and your knowledge of SQ
     WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
     ORDER BY e.emp_no;
     
-### 6 - The Retirement Titles table is exported as mentorship_eligibilty.csv ...
+### 6 - The Retirement Titles table is exported as mentorship_eligibilty.csv.
 [mentorship_eligibilty.csv](Data/mentorship_eligibilty.csv)
