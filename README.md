@@ -106,7 +106,7 @@ Now that Bobby has proven his SQL chops, his manager has given both of you two m
 Provide a bulleted list with four major points from the two analysis deliverables.
 
 Deliverable 1:
-- There is a huihg percetange of empoloyee that could retire at any time.
+- There is a high percetange of employee that could retire at any time.
 - Important to mention that engineer postions are in the top 5 titles of the retiring_title.csv, those titles are hard to fill.
 
       - 32,452 Staff
